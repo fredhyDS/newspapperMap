@@ -35,6 +35,3 @@ const structure =
 </div>
 `;
 document.getElementById('carouselNewspapper').innerHTML = structure;
-
-
-
