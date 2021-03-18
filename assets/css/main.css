@@ -1,0 +1,192 @@
+:root {
+    --colorTitle: #efefef;
+    --colorHeader: #7e2d7a;
+    --colorContent: #8f3f84;
+}
+#interactiveNewspapper {
+    overflow: hidden;
+}
+#interactiveNewspapper h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+    background: var(--colorTitle);
+    display: inline-block;
+    margin: 0px;
+    font-size: 25px;
+    padding: 5px 50px;
+    color: var(--colorHeader);
+}
+#interactiveNewspapper h3::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 40px 22px 0 0;
+    border-color: var(--colorTitle) transparent transparent transparent;
+    position: absolute;
+    top: 0px;
+    margin-left: 50px;
+    padding-left: 10px;
+}
+#interactiveNewspapper .title {
+    background: var(--colorHeader);
+    position: relative;
+}
+#interactiveNewspapper .cNewspapper {
+    background: var(--colorContent);
+    display: grid;
+    grid-template-columns: 1fr 600px;
+    grid-template-rows: auto;
+    grid-template-areas: "textIntro pappers""maps pappers";
+}
+
+/*carousel Maps */
+#carouselNewspapper {
+    background: var(--colorContent);
+    padding: 30px;
+    display: none;
+}
+#carouselNewspapper .textResponsive {
+    color: #fff;
+    padding-left: 10px;
+}
+#carouselNewspapper h4 {
+    font-weight: 600;
+    font-size: 26px;
+    margin-bottom: 0px;
+    line-height: .9;
+}
+#carouselNewspapper p {
+    font-size: 17px;
+}
+#carouselNewspapper .carousel-item div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#carouselNewspapper .carousel-item img {
+    height: 200px;
+    padding: 25px;
+    filter: brightness(100);
+}
+
+#carouselNewspapper .carousel-item a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 22px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none; 
+    line-height: .9; 
+
+}
+#carouselNewspapper .carousel-item a:hover img {
+    filter: brightness(1);
+}
+#carouselNewspapper .carousel-item a:hover {
+    color: #ffcc29;
+}
+#carouselNewspapper .carousel-item a span {
+    margin-bottom:-16px;
+
+}
+#carouselNewspapper .o {
+    opacity: 0;
+
+}
+#interactiveNewspapper .cNewspapper div:first-of-type {
+    padding-left: 50px;
+    padding-top: 20px;
+    color: #fff;
+    grid-area: textIntro;
+}
+#interactiveNewspapper .cNewspapper h4 {
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 0px;
+    line-height: .7;
+}
+#interactiveNewspapper .cNewspapper p {
+    font-size: 17px;
+}
+#interactiveNewspapper .cNewspapper div:nth-last-of-type(2) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 0rem;
+    grid-area: maps;
+}
+#interactiveNewspapper .cNewspapper div:nth-last-of-type(2) img {
+    height: 100px;
+    padding: 10px;
+    filter: brightness(100);
+}
+#interactiveNewspapper .cNewspapper div:nth-last-of-type(2) a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;   
+}
+#interactiveNewspapper .cNewspapper div:nth-last-of-type(2) a:hover img {
+    filter: brightness(1);
+}
+#interactiveNewspapper .cNewspapper div:nth-last-of-type(2) a:hover {
+    color: #ffcc29;
+}
+#interactiveNewspapper .cNewspapper div:nth-last-of-type(2) span {
+    height: 26px;
+}
+#interactiveNewspapper .cNewspapper div:nth-last-of-type(1) {
+    grid-area: pappers;
+}
+#interactiveNewspapper .cNewspapper div:nth-last-of-type(1) img {
+    margin-left: 57px;
+    margin-bottom: -62px;
+    margin-top: -38px;
+    transform: translateZ(10px);
+    animation: slide .5s;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(600px) rotate(25deg);
+    }
+    100% {
+        transform: translateY(1x) rotate(0deg);
+    }
+}
+@media (max-width: 992px) {
+    #interactiveNewspapper .cNewspapper, #carouselNewspapper {
+        display: block;
+    }
+    #carouselNewspapper {
+        overflow: hidden;
+        height: 365px;
+    }
+    #interactiveNewspapper .cNewspapper {
+        display: none;
+    }
+    #interactiveNewspapper h3 {
+        padding: 10px 10px 10px 40px;
+        font-size: 29px;
+    }
+    #interactiveNewspapper h3::after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 54px 22px 0 0;
+        border-color: var(--colorTitle) transparent transparent transparent;
+        position: absolute;
+        top: 0px;
+        margin-left: 10px;
+        padding-left: 10px;
+    }
+
+}
