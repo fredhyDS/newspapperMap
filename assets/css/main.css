@@ -3,6 +3,9 @@
     --colorHeader: #7e2d7a;
     --colorContent: #8f3f84;
 }
+.h100vh {
+    height: 100vh;
+}
 #interactiveNewspapper {
     overflow: hidden;
 }
