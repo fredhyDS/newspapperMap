@@ -292,3 +292,35 @@
 #gridNewspapper .mapsMenu img {
     padding: 10px; 
 }
+
+@media (max-width: 992px) {
+    #gridNewspapper .pappers {
+        grid-template-columns: 1fr 1fr;
+    }
+    #gridNewspapper .pappers img {
+        height: 320px;
+        width: 100%;
+        border-radius: 30px;
+        padding: 15px 15px;
+        overflow: hidden;
+        transition: .2s;        
+    }
+    #gridNewspapper .mapsMenu div {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0.2rem;
+    }
+    #gridNewspapper .mapsMenu h4 {
+        color: #fff;
+        font-size: 12px;    
+    }
+    #gridNewspapper .filter .textandImage {
+        display:flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    #gridNewspapper .filter .textandImage img {
+        width: 100%;
+        padding-bottom: 10px;
+    }
+}
