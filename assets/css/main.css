@@ -235,6 +235,17 @@
     z-index: -1;
 }
 
+#gridNewspapper .filter .closePanel {
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: red;
+    display: flex;
+    align-items: center;
+}
+
 #gridNewspapper .filter .textandImage {
     display:flex;
     align-items: center;
@@ -259,7 +270,7 @@
     font-size: 22px;
 }
 #gridNewspapper .textAndForm p {
-    color: #fff;
+    color: #000;
     margin: 0;
     padding: 5px 0 10px 0;
     font-size: 14px;
@@ -270,7 +281,7 @@
 
 }
 #gridNewspapper .mapsMenu h4 {
-    color: #fff;
+    color: #000;
     font-size: 15px;
 
 }
@@ -283,7 +294,7 @@
 #gridNewspapper .mapsMenu div a {
     font-size: 11px;
     text-align: center;
-    color: #fff;
+    color: #000;
     text-decoration: none; 
     line-height: .9; 
 
@@ -294,6 +305,23 @@
 }
 
 @media (max-width: 992px) {
+    #openMap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        background: rgb(0, 19, 128);
+        position: absolute;
+        right: 10px;
+        top: 35px;
+        padding: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #openMap img {
+        filter:invert(1)
+    }
     #gridNewspapper .pappers {
         grid-template-columns: 1fr 1fr;
     }
@@ -309,18 +337,40 @@
         grid-template-columns: 1fr 1fr;
         grid-gap: 0.2rem;
     }
+    #gridNewspapper .mapsMenu {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0.2rem;
+        position: absolute;
+        top: 0;
+        width: 0%;
+        height: 0%;
+        right: 0;
+        padding: 0px;
+        background: #fff;
+        z-index: 1;
+        overflow: hidden;
+        transition: .3s;
+    }
+    .openMaps { width: 100%!important; height: 100vh!important; transition: .3s; padding: 10px;}
     #gridNewspapper .mapsMenu h4 {
-        color: #fff;
-        font-size: 12px;    
+        color: #000;
+        font-size: 20px;
+        text-align: center;
+        margin: 18px 15px;
+        font-weight: bold;
+        text-transform: uppercase;   
     }
     #gridNewspapper .filter .textandImage {
         display:flex;
         align-items: center;
-        justify-content: flex-start;
-        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    #gridNewspapper .filter {
+        position: relative;
     }
     #gridNewspapper .filter .textandImage img {
-        width: 100%;
+        width: 100px;
         padding-bottom: 10px;
     }
 }

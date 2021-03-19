@@ -34,4 +34,19 @@ const structure =
   </button>
 </div>
 `;
-document.getElementById('carouselNewspapper').innerHTML = structure;
+if(document.getElementById('carouselNewspapper'))
+  document.getElementById('carouselNewspapper').innerHTML = structure;
+
+const openMap = document.getElementById('openMap');
+const closeMap = document.getElementById('closePanel');
+const menuMap = document.querySelector('.mapsMenu')
+  openMap.onclick = e => {
+    menuMap.classList.toggle('openMaps');
+    console.log(e.target);  // to get the element
+    console.log(e.target.tagName);  // to get the element tag name alone
+} 
+  closeMap.onclick = e => {
+    menuMap.classList.toggle('openMaps');
+    console.log(e.target);  // to get the element
+    console.log(e.target.tagName);  // to get the element tag name alone
+} 
