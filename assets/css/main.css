@@ -307,7 +307,25 @@
 
 #gridNewspapper .mapsMenu img {
     padding: 10px; 
+    
 }
+/* colors Maps */
+.c-violet {
+    filter: brightness(0.8) sepia(1) hue-rotate(84deg) saturate(2) invert(50);
+}
+.c-blue {
+    filter: brightness(0.5) sepia(2) hue-rotate(-15deg) saturate(4) invert(100);
+}
+.c-green {
+    filter: brightness(0.5) sepia(0) hue-rotate(25deg) saturate(6);
+}
+.c-red {
+    filter: brightness(0.5) sepia(0) hue-rotate(-55deg) saturate(5);
+}
+.c-active {
+    filter:grayscale(100%);
+}
+/* end colors Maps */
 #openMap { display: none;}
 
 @media (max-width: 992px) {
